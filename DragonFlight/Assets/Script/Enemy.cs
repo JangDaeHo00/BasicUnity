@@ -4,9 +4,12 @@ public class Enemy : MonoBehaviour
 {
     // 움직일 속도를 지정해준다.
     public float moveSpeed = 1.3f;
+    public int scoreValue = 10;
     void Start()
     {
-        
+        if (gameObject.CompareTag("NormalEnemy1")) scoreValue = 20;
+        else if (gameObject.CompareTag("NormalEnemy2")) scoreValue = 50;
+        else if (gameObject.CompareTag("Boss")) scoreValue = 100;
     }
 
     void Update()
@@ -21,5 +24,10 @@ public class Enemy : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);    // 객체를 삭제한다.
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.AddScore(scoreValue);
     }
 }

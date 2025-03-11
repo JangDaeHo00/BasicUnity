@@ -5,11 +5,6 @@ public class Bullet : MonoBehaviour
     public float moveSpeed = 0.45f;
     public GameObject explosion;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         // Y축 이동
@@ -31,10 +26,19 @@ public class Bullet : MonoBehaviour
     {
         // 미사일과 적이 부딫혔다
         //if(collision.gameObject.tag == "Enemy")
-        if (collision.gameObject.CompareTag("Enemy"))   // 이게 더 안전.
+        if(collision.gameObject.CompareTag("Enemy") ||
+            collision.gameObject.CompareTag("NormalEnemy1") ||
+            collision.gameObject.CompareTag("NormalEnemy2") ||
+            collision.gameObject.CompareTag("Boss"))// 이게 더 안전.
         {
             // 폭발 이펙트 생성
             Instantiate(explosion, transform.position, Quaternion.identity);
+
+            // 죽음 사운드
+            SoundManager.instance.SoundDie();
+
+            //// 점수 올려주기
+            //GameManager.instance.AddScore(10);
 
             // 적 지우기
             Destroy(collision.gameObject);  // Enemy -> collision.gameObject
