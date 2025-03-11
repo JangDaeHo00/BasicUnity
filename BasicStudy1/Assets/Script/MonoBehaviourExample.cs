@@ -4,18 +4,18 @@ public class MonoBehaviourExample : MonoBehaviour
 {
        void Start()
     {
-        Debug.Log("Start : °ÔÀÓÀÌ ½ÃÀÛµÉ ¶§ È£ÃâµË´Ï´Ù.");
+        Debug.Log("Start : ê²Œì„ì´ ì‹œì‘ë  ë•Œ í˜¸ì¶œë©ë‹ˆë‹¤.");
     }
 
         void Update()
     {
-        Debug.Log("Update : ÇÁ·¹ÀÓ¸¶´Ù È£ÃâµË´Ï´Ù.");
+        Debug.Log("Update : í”„ë ˆì„ë§ˆë‹¤ í˜¸ì¶œë©ë‹ˆë‹¤.");
     }
 
     private void FixedUpdate()
     {
-        Debug.Log("Fixedupdate : ¹°¸® ¿¬»ê¿¡ »ç¿ëµË´Ï´Ù.");
+        Debug.Log("Fixedupdate : ë¬¼ë¦¬ ì—°ì‚°ì— ì‚¬ìš©ë©ë‹ˆë‹¤.");
     }
 
-    // ÄÁÆ®·Ñ ½¬ÇÁÆ® m
+    // ì»¨íŠ¸ë¡¤ ì‰¬í”„íŠ¸ m
 }

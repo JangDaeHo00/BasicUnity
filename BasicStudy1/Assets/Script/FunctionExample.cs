@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FunctionExample : MonoBehaviour
 {
-    // ÇÔ¼ö Á¤ÀÇ
+    // í•¨ìˆ˜ ì •ì˜
     void SayHello()
     {
         Debug.Log("Hello, Unity");
@@ -15,7 +15,7 @@ public class FunctionExample : MonoBehaviour
 
        void Start()
     {
-        SayHello(); // ÇÔ¼ö È£Ãâ
+        SayHello(); // í•¨ìˆ˜ í˜¸ì¶œ
         int total = AddNumbers(3, 5);
         Debug.Log("Total : " + total);
         Debug.Log($"Total : {total}");
